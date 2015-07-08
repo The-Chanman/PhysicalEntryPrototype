@@ -1,4 +1,4 @@
-//Sudo Code for the building entry prototype on the individual's side
+//Pseudocode for the building entry prototype on the individual's side
 var scanResults = {
 	found: false,
 	Devices: []
@@ -10,7 +10,6 @@ while(true){
 			bluetoothPair(scan.Devices[i]);	
 			sendBlueTooth(myID.address);
 			var msg = bluetoothMSG();
-
 			createTransaction(msg.address, msg.phrase);
 			openWebSocket(myID.address);
 			conn.onmessage = function (ev) {
